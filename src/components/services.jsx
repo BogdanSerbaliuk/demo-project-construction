@@ -82,7 +82,7 @@ function Services() {
             />
             <div className="absolute inset-0 bg-black/40" />
 
-            <div className="absolute inset-0 flex flex-col items-center justify-center gap-15">
+            <div className="absolute inset-0 flex flex-col items-center justify-center gap-10">
 
                 <div className="flex flex-row items-center justify-center gap-30 w-full">
                     <button
@@ -95,11 +95,11 @@ function Services() {
 
                     <div
                         ref={scrollRef}
-                        className="flex w-3/5 rounded-3xl overflow-x-auto snap-x snap-mandatory
+                        className="flex w-3/5 h-[min(60vh,35rem)] rounded-3xl overflow-x-auto snap-x snap-mandatory
               [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] scrollbar-none"
                     >
                         {cards.map((card) => (
-                            <div key={card.id} className="flex-none w-full h-[35rem] snap-center">
+                            <div key={card.id} className="flex-none w-full h-full snap-center">
                                 <div className="relative w-full h-full overflow-hidden">
                                     <img
                                         src={card.image}

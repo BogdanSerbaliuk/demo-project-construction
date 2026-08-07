@@ -9,7 +9,7 @@ import About from "./components/about.jsx";
 
 function App() {
     return(
-        <div>
+        <div className="snap-y snap-mandatory">
             <div className="h-screen flex flex-col ">
                 <Navbar/>
                 <Home/>
