@@ -1,4 +1,4 @@
-
+import homepagePhoto from "../pictures/homepagephoto.jpg";
 
 function Home() {
 
@@ -6,7 +6,7 @@ function Home() {
         <section className="relative w-full h-[calc(100vh-4rem)]">
             {/* Background image fills the whole section */}
             <img
-                src="src/pictures/homepagephoto.jpg"
+                src={homepagePhoto}
                 alt="Mansion front view"
                 className="absolute inset-0 w-full h-full object-cover"
             />

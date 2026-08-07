@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-
+import backYardPhoto from "../pictures/backyard.webp";
 import img1 from "../pictures/cards/aftersales.jpg";
 import img2 from "../pictures/cards/beforeafter.jpg";
 import img3 from "../pictures/cards/blueprints.jpg";
@@ -76,7 +76,7 @@ function Services() {
     return (
         <section className="relative w-full h-screen">
             <img
-                src="src/pictures/backyard.webp"
+                src={backYardPhoto}
                 alt="Backyard"
                 className="absolute inset-0 w-full h-full object-cover"
             />
