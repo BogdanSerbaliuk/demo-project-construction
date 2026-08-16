@@ -4,6 +4,7 @@ import Home from "./components/home.jsx";
 import Services from "./components/services.jsx";
 import About from "./components/about.jsx";
 import Prices from "./components/prices.jsx";
+import Location from "./components/location.jsx";
 import Footer from "./components/footer.jsx";
 
 
@@ -19,6 +20,7 @@ function App() {
             <Services/>
             <Prices/>
             <About/>
+            <Location/>
             <Footer/>
         </div>
     )

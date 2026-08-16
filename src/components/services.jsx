@@ -55,8 +55,6 @@ function Services() {
     const scrollRef = useRef(null);
     const [activeIndex, setActiveIndex] = useState(0);
 
-    // Query slides by attribute rather than container.children, so the index
-    // stays correct even if a spacer or overlay is added inside the track later.
     const getSlides = useCallback(
         () => Array.from(scrollRef.current?.querySelectorAll("[data-slide]") ?? []),
         [],
@@ -88,7 +86,6 @@ function Services() {
             setActiveIndex(nearest);
         };
 
-        // Throttle to one update per frame — the raw scroll event fires far more often.
         const onScroll = () => {
             if (frame === null) frame = requestAnimationFrame(sync);
         };
@@ -143,17 +140,11 @@ function Services() {
             />
             <div className="absolute inset-0 bg-black/40" />
 
-            {/*
-              min-h-dvh, not h-screen: on mobile 100vh is measured with the browser
-              chrome hidden, so h-screen overflows behind the URL bar. And because the
-              content is in normal flow (not absolute inset-0), a short landscape phone
-              scrolls instead of clipping the Details button off the bottom.
-            */}
             <div className="relative flex min-h-dvh w-full flex-col items-center justify-center gap-8 px-4 py-12 sm:px-6">
 
                 <h2 className="sr-only">Our Services</h2>
 
-                <div className="flex w- full max-w-6xl items-center justify-center gap-2 md:gap-6 lg:gap-12">
+                <div className="flex w-full max-w-6xl items-center justify-center gap-2 md:gap-6 lg:gap-12">
                     <button
                         type="button"
                         aria-label="Previous service"
@@ -164,11 +155,6 @@ function Services() {
                         <ArrowLeftIcon className="size-8 lg:size-10" />
                     </button>
 
-                    {/*
-                      MOBILE: full width, swipe to move between slides (the arrows are
-                      hidden below md because at 360px they left the track only ~200px).
-                      relative is required — slide.offsetLeft is measured against it.
-                    */}
                     <div
                         ref={scrollRef}
                         tabIndex={0}
@@ -176,7 +162,7 @@ function Services() {
                         aria-roledescription="carousel"
                         aria-label="Our services"
                         onKeyDown={handleKeyDown}
-                        className="relative flex h-[clamp(18rem,60dvh,35rem)] w-full snap-x snap-mandatory overflow-x-auto overflow-y-hidden rounded-3xl scrollbar-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden md:w-4/5 lg:w-3/5"
+                        className="relative flex h-[clamp(18rem,60dvh,35rem)] w-full snap-x snap-mandatory overflow-x-auto overflow-y-hidden rounded-3xl scrollbar-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden md:w-4/5 lg:w-4/5"
                     >
                         {CARDS.map((card, index) => (
                             <article
@@ -184,9 +170,7 @@ function Services() {
                                 data-slide
                                 aria-roledescription="slide"
                                 aria-label={`${index + 1} of ${CARDS.length}`}
-                                /* @container: the caption below sizes off the SLIDE's width,
-                                   which differs a lot between a 360px phone and a 3/5-width
-                                   desktop track. */
+
                                 className="@container relative h-full w-full flex-none snap-center overflow-hidden"
                             >
                                 <img
@@ -197,8 +181,6 @@ function Services() {
                                     className="absolute inset-0 h-full w-full object-cover"
                                 />
 
-                                {/* Gradient instead of a flat tint: keeps the image bright at the
-                                    top while guaranteeing contrast behind the text at the bottom. */}
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10" />
 
                                 <div className="absolute inset-0 flex flex-col justify-end p-6 text-white @md:p-8">
@@ -223,9 +205,6 @@ function Services() {
                         <ArrowRightIcon className="size-8 lg:size-10" />
                     </button>
                 </div>
-
-                {/* Dots: the button is 40x24 so it clears the 24px minimum touch target,
-                    while the visible bar stays 8px tall. */}
                 <div className="flex flex-row gap-2">
                     {CARDS.map((card, index) => (
                         <button
