@@ -1,6 +1,6 @@
 import homepagePhoto from "../pictures/homepagephoto.jpg";
 
-function Home() {
+function Main() {
 
     return(
         <section className="relative w-full h-[calc(100vh-4rem)]">
@@ -37,4 +37,4 @@ function Home() {
     )
 }
 
-export default Home;
+export default Main;

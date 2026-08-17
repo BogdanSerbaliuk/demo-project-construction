@@ -7,7 +7,6 @@ import img3 from "../pictures/cards/blueprints.jpg";
 import img4 from "../pictures/cards/conccreete.jpg";
 import img5 from "../pictures/cards/prefab.webp";
 
-// Static data — outside the component so it isn't re-created on every render.
 const CARDS = [
     {
         id: 1,

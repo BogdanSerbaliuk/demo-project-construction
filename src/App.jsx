@@ -1,28 +1,31 @@
 import './App.css'
-import Navbar from "./components/navbar.jsx";
-import Home from "./components/home.jsx";
-import Services from "./components/services.jsx";
-import About from "./components/about.jsx";
-import Prices from "./components/prices.jsx";
-import Location from "./components/location.jsx";
-import Footer from "./components/footer.jsx";
+import Home from "./pages/Home.jsx";
+import {Routes, Route, useLocation} from "react-router-dom";
+import TermsOfUse from "./pages/termsOfUse.jsx";
+import PrivacyPolicy from "./pages/privacyPolicy.jsx";
+import {useLayoutEffect} from "react";
 
+function ScrollToTop() {
+    const { pathname } = useLocation();
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0);
+    },[pathname]);
+    return null;
+}
 
 
 
 function App() {
     return(
-        <div>
-            <div className="h-screen flex flex-col ">
-                <Navbar/>
-                <Home/>
-            </div>
-            <Services/>
-            <Prices/>
-            <About/>
-            <Location/>
-            <Footer/>
-        </div>
+        <>
+            <ScrollToTop />
+            <Routes>
+                <Route path="/" element={<Home/>}/>
+                <Route path="/terms" element={<TermsOfUse/>}/>
+                <Route path="/privacy" element={<PrivacyPolicy/>}/>
+            </Routes>
+        </>
+
     )
 }
 
