@@ -1,5 +1,8 @@
 // Content lives in a plain array so editing the text never means touching JSX.
 // A `body` entry is either a string (paragraph) or an array (bullet list).
+import {ArrowLeftFromLine} from "lucide-react";
+import {useNavigate} from "react-router-dom";
+
 const SECTIONS = [
     {
         id: "acceptance-of-terms",
@@ -94,9 +97,21 @@ const SECTIONS = [
 ];
 
 function TermsOfUse() {
+    const navigate = useNavigate();
+
     return (
         <main className="min-h-screen w-full bg-gray-900 px-4 py-12 text-white sm:px-6">
             <div className="mx-auto w-full max-w-3xl">
+
+                <button
+                    type="button"
+                    onClick={() => (window.history.length > 2 ? navigate(-1) : navigate('/'))}
+                    className="cursor-pointer mb-6 px-4 py-2 gap-3 inline-flex items-center text-lg font-medium rounded-md bg-blue-600 hover:bg-blue-700 active:scale-95
+                    sticky top-6 z-50
+                    "
+                >
+                    <ArrowLeftFromLine size={24} aria-hidden={true}/>Back
+                </button>
 
                 <h1 className="text-3xl font-semibold sm:text-4xl">Terms of Use</h1>
 

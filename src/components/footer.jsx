@@ -9,6 +9,10 @@ function Footer() {
                     © {new Date().getFullYear()} Your Company. All rights reserved.
                 </p>
                 <div className="flex gap-6 text-sm text-gray-400">
+                    <Link to="/tilecounter" className="hover:text-white transition-colors">
+                        Tile Calculator
+                    </Link>
+
                     <Link to="/privacy" className="hover:text-white transition-colors"> Privacy Policy</Link>
 
                     <Link to="/terms" className="hover:text-white transition-colors">

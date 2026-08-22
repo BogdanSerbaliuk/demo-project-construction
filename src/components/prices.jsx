@@ -58,7 +58,7 @@ function Prices() {
                             key={manager.id}
                             className="@container w-full md:w-[calc((100%-1.5rem)/2)] xl:w-[calc((100%-3rem)/3)]"
                         >
-                            <article className="flex h-full flex-col items-center gap-4 rounded-2xl bg-gradient-to-br from-gray-900 via-gray-800 to-orange-950 p-5 text-center @sm:flex-row @sm:gap-5 @sm:text-left">
+                            <article className="flex h-full flex-col items-center gap-4 rounded-2xl bg-gradient-to-br from-gray-900 via-gray-800 to-orange-950 p-5 text-center @sm:flex-row @sm:gap-5 @sm:text-left hover:scale-105">
                                 <img
                                     src={manager.image}
                                     alt={manager.name}

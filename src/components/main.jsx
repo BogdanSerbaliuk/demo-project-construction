@@ -1,4 +1,5 @@
 import homepagePhoto from "../pictures/homepagephoto.jpg";
+import {Link} from "react-router-dom";
 
 function Main() {
 
@@ -28,9 +29,9 @@ function Main() {
                     <button className="px-6 py-3 bg-blue-500 rounded-md font-medium hover:bg-blue-600 transition-colors">
                         Get Started
                     </button>
-                    <button className="px-6 py-3 border border-white rounded-md font-medium hover:bg-white/10 transition-colors">
-                        Learn More
-                    </button>
+                    <Link to="/tilecounter" className="px-6 py-3 bg-white rounded-md font-medium hover:bg-gray-100 transition-colors">
+
+                    </Link>
                 </div>
             </div>
         </section>

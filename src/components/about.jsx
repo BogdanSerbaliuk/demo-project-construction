@@ -26,7 +26,7 @@ const TEAM_BLOCKS = [
 const STATS = [
     { id: "years", value: "15+", label: "Years building" },
     { id: "projects", value: "240", label: "Projects delivered" },
-    { id: "crew", value: "30", label: "People on the team" },
+    { id: "crew", value: "160", label: "People on the team" },
 ];
 
 function About() {
