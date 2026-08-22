@@ -1,39 +1,43 @@
 import homepagePhoto from "../pictures/homepagephoto.jpg";
-import {Link} from "react-router-dom";
+import Button from "../components/ui/button.jsx";
 
 function Main() {
 
     return(
         <section className="relative w-full h-[calc(100vh-4rem)]">
-            {/* Background image fills the whole section */}
             <img
                 src={homepagePhoto}
                 alt="Mansion front view"
                 className="absolute inset-0 w-full h-full object-cover"
             />
-
-            {/* Dark overlay — makes text readable over busy photos.
-          Remove this div if your image is already dark/simple enough. */}
             <div className="absolute inset-0 bg-black/30" />
 
-            {/* Content sits on top because it comes after the image in the DOM,
-          and it's positioned relative to the same parent via absolute + inset-0 */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
-                <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                    EliteCraft Contractors
-                </h1>
-                <p className="text-lg mb-6 max-w-md">
-                    We build with heart, we create with passion.
-                </p>
-                <div className="flex gap-4">
-                    <button className="px-6 py-3 bg-blue-500 rounded-md font-medium hover:bg-blue-600 transition-colors">
-                        Get Started
-                    </button>
-                    <Link to="/tilecounter" className="px-6 py-3 bg-white rounded-md font-medium hover:bg-gray-100 transition-colors">
+            <div className="absolute inset-0 px-4">
+                <div className="w-full h-full flex flex-col justify-center items-center text-center text-white
+                md:items-start md:justify-end md:p-16 md:text-left md:pb-38 md:pl-38
+                lg:items-start lg:justify-end lg:p-24 lg:text-left lg:pb-45 lg:pl-45
+                "
+                >
+                    <div>
+                        <h1 className="text-4xl md:text-5xl font-bold mb-4">
+                            EliteCraft Contractors
+                        </h1>
+                    </div>
+                    <div>
+                        <p className="text-lg mb-6 max-w-md">
+                            We build with heart, we create with passion.
+                        </p>
+                    </div>
+                    <div className="flex flex-col gap-4 md:flex-row">
+                        <Button variant="ghost">Contact us</Button>
+                        <Button variant="ghost" to="/tilecounter">Viev portfolio</Button>
 
-                    </Link>
+                    </div>
                 </div>
             </div>
+
+
+
         </section>
     )
 }
