@@ -6,6 +6,7 @@ import img2 from "../pictures/cards/beforeafter.jpg";
 import img3 from "../pictures/cards/blueprints.jpg";
 import img4 from "../pictures/cards/conccreete.jpg";
 import img5 from "../pictures/cards/prefab.webp";
+import Button from "./ui/button.jsx";
 
 const CARDS = [
     {
@@ -223,12 +224,7 @@ function Services() {
                     ))}
                 </div>
 
-                <button
-                    type="button"
-                    className="w-full max-w-xs rounded-md bg-blue-600 px-12 py-4 font-medium text-white transition hover:bg-blue-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white active:scale-90 sm:w-auto"
-                >
-                    Details
-                </button>
+                <Button variant="primary" to="/services">Details</Button>
             </div>
 
             <div role="status" aria-live="polite" className="sr-only">

@@ -1,10 +1,10 @@
 import homepagePhoto from "../pictures/homepagephoto.jpg";
 import Button from "../components/ui/button.jsx";
 
-function Main() {
+function Header() {
 
     return(
-        <section className="relative w-full h-[calc(100vh-4rem)]">
+        <section className="relative w-full h-dvh pt-16">
             <img
                 src={homepagePhoto}
                 alt="Mansion front view"
@@ -20,7 +20,7 @@ function Main() {
                 >
                     <div>
                         <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                            EliteCraft Contractors
+                            EliteCraft Contractor
                         </h1>
                     </div>
                     <div>
@@ -29,8 +29,8 @@ function Main() {
                         </p>
                     </div>
                     <div className="flex flex-col gap-4 md:flex-row">
-                        <Button variant="ghost">Contact us</Button>
-                        <Button variant="ghost" to="/tilecounter">Viev portfolio</Button>
+                        <Button variant="ghost" to="*">Text</Button>
+                        <Button variant="ghost" to="/tilecounter">Text</Button>
 
                     </div>
                 </div>
@@ -42,4 +42,4 @@ function Main() {
     )
 }
 
-export default Main;
+export default Header;
