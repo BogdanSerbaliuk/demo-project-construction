@@ -1,6 +1,6 @@
 
 import {useState} from "react";
-import portfolioBg from "../pictures/portfoliobg.jpg";
+import portfolioBg from "../pictures/portfolioBg.jpg";
 import ProjectCard from "../components/ui/CardPortfolioPage.jsx";
 import ProjectDialog from "../components/ui/DialogPortfolioPage.jsx";
 
