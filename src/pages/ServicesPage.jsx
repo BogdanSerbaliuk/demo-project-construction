@@ -11,7 +11,7 @@ const SERVICES = [
         id: "houses",
         title: "Construction of Houses and Cottages",
         summary:
-            "Turnkey builds from the first soil test to the day you get the keys.",
+            "Turnkey builds from the first soil test.jsx to the day you get the keys.",
         includes: [
             "Site survey and soil testing",
             "Foundation and drainage",

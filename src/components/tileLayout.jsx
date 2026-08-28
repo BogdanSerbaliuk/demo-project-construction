@@ -152,7 +152,7 @@ function TileLayout({ layout, sourceByKey = {}, showLabels = true }) {
  * never push out the label of the piece it is borrowing from. On a square-on
  * grid the borrowed space is a whole tile, which carries no label anyway; on a
  * 45° grid the tile axes no longer line up with the walls and the borrowed
- * space can be another cut piece, which is what the overlap test is for.
+ * space can be another cut piece, which is what the overlap test.jsx is for.
  */
 function placeLabels({ tiles, roomL, roomW, tileW, tileH, fontSize }) {
     const gap = fontSize * 0.35;

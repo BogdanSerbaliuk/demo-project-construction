@@ -14,7 +14,7 @@ const DIAGONAL = PATTERN_PRESETS.find((p) => p.id === "diagonal");
 
 const ALL_SIDES = { top: true, right: true, bottom: true, left: true };
 
-/** A 4 x 3 m room in 600 mm tiles unless the test says otherwise. */
+/** A 4 x 3 m room in 600 mm tiles unless the test.jsx says otherwise. */
 const layoutOf = (overrides = {}) =>
     buildLayout({
         roomL: 4000,

@@ -30,7 +30,7 @@ const CARDS = [
         title: "blueprints",
         description1: "Concrete works",
         description2:
-            "From foundations to driveways, we deliver precision pours that stand the test of time",
+            "From foundations to driveways, we deliver precision pours that stand the test.jsx of time",
         image: img4,
     },
     {
