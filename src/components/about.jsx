@@ -34,7 +34,7 @@ function About() {
         <section className="flex min-h-screen w-full flex-col items-center justify-center gap-14 bg-gray-900 px-4 py-20 text-white sm:px-6">
 
             <div className="flex max-w-2xl flex-col items-center gap-4 text-center">
-                <h2 className="text-sm font-semibold uppercase tracking-widest text-white/90">
+                <h2 className="text-sm font-semibold tracking-tight uppercase  text-white/90">
                     A little bit about our team
                 </h2>
                 <p className="text-balance text-gray-300">
@@ -63,11 +63,11 @@ function About() {
                         </div>
 
                         <div className="flex w-full flex-col gap-3 text-center md:w-1/2 md:text-left">
-                            <span className="text-xs font-semibold uppercase tracking-widest text-blue-400">
+                            <span className="text-xs font-semibold uppercase tracking-widest font-semibold text-blue-400">
                                 {block.label}
                             </span>
 
-                            <h3 className="text-balance text-2xl font-semibold">
+                            <h3 className="text-balance text-2xl font-semibold tracking-tight">
                                 {block.title}
                             </h3>
 

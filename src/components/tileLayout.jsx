@@ -121,7 +121,7 @@ function TileLayout({ layout, sourceByKey = {}, showLabels = true }) {
             </svg>
 
             <figcaption className="flex flex-col gap-2 text-sm text-gray-300">
-                <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
+                <div className="flex flex-wrap items-center gap-x-5 gap-y-2 tabular-nums">
                     <Swatch tone={COLORS.full}>{full} laid whole</Swatch>
                     <Swatch tone={COLORS.new}>
                         {countBy(sourceByKey, "new")} cut from a new tile

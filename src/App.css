@@ -1,1 +1,15 @@
 @import "tailwindcss";
+
+/* fonts
+Hero h1	text-4xl md:text-6xl font-extrabold tracking-tight
+Page h1	text-3xl sm:text-4xl font-extrabold tracking-tight
+Section h2	text-2xl font-semibold tracking-tight
+Card h3	text-lg font-semibold
+Body	nothing
+Meta / muted	text-sm
+Eyebrow	text-xs font-semibold uppercase tracking-widest
+Figures	tabular-nums
+*/
+@theme {
+    --font-sans: "Barlow", ui-sans-serif, system-ui, sans-serif;
+}

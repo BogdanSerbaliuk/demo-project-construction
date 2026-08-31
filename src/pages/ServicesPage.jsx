@@ -125,9 +125,9 @@ function ServicesPage() {
         <main className="min-h-screen w-full bg-gray-900 px-4 py-12 text-white sm:px-6">
             <div className="mx-auto w-full max-w-6xl">
 
-                <Button variant="primary" to="/" className="sticky top-6 z-50 mb-6 inline-flex cursor-pointer items-center gap-3 rounded-md bg-blue-600 px-4 py-2 text-lg font-medium hover:bg-blue-700 active:scale-95"><ArrowLeftFromLine size={24} aria-hidden="true" />Back</Button>
+                <Button variant="primary" to="/" className="sticky top-6 z-50 mb-6 inline-flex cursor-pointer items-center gap-3 rounded-md bg-blue-600 px-4 py-2 text-lg font-semibold hover:bg-blue-700 active:scale-95"><ArrowLeftFromLine size={24} aria-hidden="true" />Back</Button>
 
-                <h1 className="text-3xl font-semibold sm:text-4xl">Our Services</h1>
+                <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight">Our Services</h1>
 
                 <p className="mt-6 max-w-prose text-gray-300">
                     What each service covers, what it typically costs, and what moves that
@@ -171,7 +171,7 @@ function ServicesPage() {
 function ServiceSection({ service }) {
     return (
         <section id={service.id} className="scroll-mt-24">
-            <h2 className="text-2xl font-semibold">{service.title}</h2>
+            <h2 className="text-2xl font-semibold tracking-tight">{service.title}</h2>
             <p className="mt-3 max-w-prose text-gray-300">{service.summary}</p>
 
             <div className="mt-6 grid gap-6 md:grid-cols-2">
@@ -191,7 +191,7 @@ function ServiceSection({ service }) {
                     {service.price ? (
                         <>
                             <span className="text-sm text-gray-300">From</span>
-                            <p className="text-3xl font-semibold">
+                            <p className="text-3xl font-semibold tabular-nums">
                                 {service.price.toLocaleString()}
                                 <span className="ml-2 text-base font-normal text-gray-300">
                                     {service.unit}
@@ -199,7 +199,7 @@ function ServiceSection({ service }) {
                             </p>
                         </>
                     ) : (
-                        <p className="text-2xl font-semibold">Included with every project</p>
+                        <p className="text-2xl font-semibold tracking-tight">Included with every project</p>
                     )}
 
                     <p className="mt-4 text-sm text-gray-300">
@@ -227,7 +227,7 @@ function ServiceSection({ service }) {
                     {service.tool && (
                         <Link
                             to={service.tool.to}
-                            className="mt-6 inline-flex items-center justify-center rounded-md bg-blue-600 px-5 py-2.5 text-sm font-medium transition-colors hover:bg-blue-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-300"
+                            className="mt-6 inline-flex items-center justify-center rounded-md bg-blue-600 px-5 py-2.5 text-sm font-semibold transition-colors hover:bg-blue-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-300"
                         >
                             {service.tool.label}
                         </Link>

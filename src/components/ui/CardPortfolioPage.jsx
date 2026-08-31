@@ -39,7 +39,7 @@ function ProjectCard({ project, onOpen }) {
                         ))}
                     </ul>
 
-                    <dl className="mt-4 flex flex-col gap-2 text-sm">
+                    <dl className="mt-4 flex flex-col gap-2 text-sm tabular-nums">
                         <Row label="Plot area" value={`${project.plotArea.toLocaleString()} m²`} />
                         <Row label="Building area" value={`${project.buildingArea} m²`} />
                         <Row label="Time spent" value={project.duration} />
@@ -56,7 +56,7 @@ function Row({ label, value }) {
     return (
         <div className="flex justify-between gap-4 border-b border-gray-700 pb-2 last:border-0">
             <dt className="text-black">{label}</dt>
-            <dd className="font-medium">{value}</dd>
+            <dd className="font-semibold">{value}</dd>
         </div>
     );
 }

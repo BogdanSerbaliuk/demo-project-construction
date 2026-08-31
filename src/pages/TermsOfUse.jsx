@@ -106,14 +106,14 @@ function TermsOfUse() {
                 <button
                     type="button"
                     onClick={() => (window.history.length > 2 ? navigate(-1) : navigate('/'))}
-                    className="cursor-pointer mb-6 px-4 py-2 gap-3 inline-flex items-center text-lg font-medium rounded-md bg-blue-600 hover:bg-blue-700 active:scale-95
+                    className="cursor-pointer mb-6 px-4 py-2 gap-3 inline-flex items-center text-lg font-semibold rounded-md bg-blue-600 hover:bg-blue-700 active:scale-95
                     sticky top-6 z-50
                     "
                 >
                     <ArrowLeftFromLine size={24} aria-hidden={true}/>Back
                 </button>
 
-                <h1 className="text-3xl font-semibold sm:text-4xl">Terms of Use</h1>
+                <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight">Terms of Use</h1>
 
                 {/* Hardcoded on purpose — this is a fact about the document, not the render date */}
                 <p className="mt-2 text-sm text-gray-400">Last updated: 17 August 2026</p>
@@ -126,7 +126,7 @@ function TermsOfUse() {
                 <div className="mt-12 flex flex-col gap-10">
                     {SECTIONS.map((section, index) => (
                         <section key={section.id} id={section.id} className="scroll-mt-8">
-                            <h2 className="text-xl font-semibold">
+                            <h2 className="text-2xl font-semibold tracking-tight">
                                 {index + 1}. {section.heading}
                             </h2>
 

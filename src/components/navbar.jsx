@@ -32,7 +32,7 @@ function Navbar() {
             <div className="max-w-6xl mx-auto px-4">
                 <div className="flex justify-between items-center h-16">
                     {/* Logo / brand */}
-                    <span className="font-bold text-lg">My App</span>
+                    <span className="font-extrabold text-lg">My App</span>
 
                     {/* Desktop links — hidden on small screens */}
                     <div className="hidden md:flex gap-6">
@@ -41,7 +41,7 @@ function Navbar() {
                                 key={link.to}
                                 to={link.to}
                                 onClick={() => setActiveLink(link.to)}
-                                className={`text-sm transition-colors`}
+                                className={`text-sm font-semibold transition-colors`}
                             >
                                 {link.label}
                             </Link>
@@ -69,7 +69,7 @@ function Navbar() {
                                     setActiveLink(link.to);
                                     setIsMenuOpen(false); // close menu after picking a link
                                 }}
-                                className={`text-sm px-2 py-2 rounded-md ${
+                                className={`text-sm font-semibold px-2 py-2 rounded-md ${
                                     activeLink === link.to
                                         ? "bg-gray-800 text-blue-400"
                                         : "text-gray-300 hover:bg-gray-800"

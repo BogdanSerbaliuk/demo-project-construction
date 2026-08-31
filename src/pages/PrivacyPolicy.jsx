@@ -118,7 +118,7 @@ function PrivacyPolicy() {
                     <ArrowLeftFromLine size={24} aria-hidden={true}/>Back
                 </button>
 
-                <h1 className="text-3xl font-semibold sm:text-4xl">Privacy Policy</h1>
+                <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight">Privacy Policy</h1>
 
                 {/* Hardcoded on purpose — this is a fact about the document, not the render date */}
                 <p className="mt-2 text-sm text-gray-400">Last updated: 17 August 2026</p>
@@ -131,7 +131,7 @@ function PrivacyPolicy() {
                 <div className="mt-12 flex flex-col gap-10">
                     {SECTIONS.map((section, index) => (
                         <section key={section.id} id={section.id} className="scroll-mt-8">
-                            <h2 className="text-xl font-semibold">
+                            <h2 className="text-2xl font-semibold tracking-tight">
                                 {index + 1}. {section.heading}
                             </h2>
 

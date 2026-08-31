@@ -84,7 +84,7 @@ function ProjectDialog({ project, onClose }) {
         >
             <header className="mb-4 flex items-start justify-between gap-4">
                 <div>
-                    <h2 className="text-xl font-semibold">{project.title}</h2>
+                    <h2 className="text-2xl font-semibold tracking-tight">{project.title}</h2>
                 </div>
                 <button
                     type="button"

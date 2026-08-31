@@ -44,7 +44,7 @@ function PortfolioPage() {
                 <div className="absolute inset-0 bg-black/50" />
 
                 <div className="relative flex h-full flex-col items-center justify-center px-4 pt-16 text-center">
-                    <h1 className="mb-4 text-4xl font-bold md:text-5xl text-white">Our Portfolio</h1>
+                    <h1 className="mb-4 text-3xl sm:text-4xl font-extrabold tracking-tight text-white">Our Portfolio</h1>
                     <p className="max-w-prose text-gray-200">
                         Here you can find info about our projects — what we have built and
                         what we are working on now.

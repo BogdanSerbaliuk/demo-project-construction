@@ -86,12 +86,12 @@ function TileCounter() {
                 <button
                     type="button"
                     onClick={() => (window.history.length > 2 ? navigate(-1) : navigate("/"))}
-                    className="sticky top-6 z-50 mb-6 inline-flex cursor-pointer items-center gap-3 rounded-md bg-blue-600 px-4 py-2 text-lg font-medium hover:bg-blue-700 active:scale-95"
+                    className="sticky top-6 z-50 mb-6 inline-flex cursor-pointer items-center gap-3 rounded-md bg-blue-600 px-4 py-2 text-lg font-semibold hover:bg-blue-700 active:scale-95"
                 >
                     <ArrowLeftFromLine size={24} aria-hidden="true" />Back
                 </button>
 
-                <h1 className="text-3xl font-semibold sm:text-4xl">Tile Calculator</h1>
+                <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight">Tile Calculator</h1>
 
                 <p className="mt-6 max-w-prose text-gray-300">
                     Enter the room dimensions to see how the chosen pattern falls across the
@@ -127,7 +127,7 @@ function TileCounter() {
                         </Field>
 
                         <fieldset>
-                            <legend className="mb-2 text-sm font-medium text-gray-300">
+                            <legend className="mb-2 text-sm font-semibold text-gray-300">
                                 Layout pattern
                             </legend>
                             <div className="flex flex-wrap gap-2">
@@ -144,7 +144,7 @@ function TileCounter() {
                         </fieldset>
 
                         <fieldset>
-                            <legend className="mb-2 text-sm font-medium text-gray-300">
+                            <legend className="mb-2 text-sm font-semibold text-gray-300">
                                 Which sides get cut
                             </legend>
 
@@ -194,7 +194,7 @@ function TileCounter() {
                         </fieldset>
 
                         <fieldset>
-                            <legend className="mb-2 text-sm font-medium text-gray-300">
+                            <legend className="mb-2 text-sm font-semibold text-gray-300">
                                 Preview
                             </legend>
                             <Toggle pressed={showLabels} onClick={() => setShowLabels((on) => !on)}>
@@ -215,7 +215,7 @@ function TileCounter() {
                             showLabels={showLabels}
                         />
 
-                        <div className="rounded-2xl bg-gradient-to-br from-gray-900 via-gray-800 to-orange-950 p-6 ring-1 ring-gray-700">
+                        <div className="rounded-2xl bg-gradient-to-br from-gray-900 via-gray-800 to-orange-950 p-6 ring-1 ring-gray-700 tabular-nums">
                             <Row label="Full tiles" value={result.fullTiles} />
                             <Row label="Cut pieces needed" value={result.cutPieces} />
                             <Row
@@ -274,7 +274,7 @@ const CONTROL_CLASS =
 function Field({ label, children }) {
     return (
         <label className="block">
-            <span className="mb-2 block text-sm font-medium text-gray-300">{label}</span>
+            <span className="mb-2 block text-sm font-semibold text-gray-300">{label}</span>
             {children}
         </label>
     );
@@ -336,7 +336,7 @@ function Row({ label, value, strong }) {
     return (
         <div className="flex items-baseline justify-between gap-4 py-1">
             <span className="text-sm text-gray-300">{label}</span>
-            <span className={strong ? "text-lg font-semibold" : "text-sm font-medium"}>
+            <span className={strong ? "text-lg font-semibold" : "text-sm font-semibold"}>
                 {value}
             </span>
         </div>

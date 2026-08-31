@@ -19,7 +19,7 @@ function Header() {
                 "
                 >
                     <div>
-                        <h1 className="text-4xl md:text-5xl font-bold mb-4">
+                        <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-4">
                             EliteCraft Contractor
                         </h1>
                     </div>

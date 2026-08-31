@@ -46,7 +46,7 @@ function Prices() {
     return (
         <section className="flex w-full flex-col items-center gap-10 bg-gray-900 px-4 py-16 text-white sm:px-6">
 
-            <h2 className="text-sm font-semibold uppercase tracking-widest text-white/90">
+            <h2 className="text-2xl font-semibold tracking-tight uppercase text-white/90">
                 Meet Our Team
             </h2>
 
@@ -122,14 +122,14 @@ function Prices() {
                         href={pdfPath}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center gap-2 rounded-md bg-blue-500 px-8 py-3 font-medium transition-colors hover:bg-blue-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-300"
+                        className="flex items-center justify-center gap-2 rounded-md bg-blue-500 px-8 py-3 font-semibold transition-colors hover:bg-blue-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-300"
                     >
                         <Eye size={20} aria-hidden="true" /> Check online
                     </a>
                     <a
                         href={pdfPath}
                         download
-                        className="flex items-center justify-center gap-2 rounded-md bg-blue-500 px-8 py-3 font-medium transition-colors hover:bg-blue-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-300"
+                        className="flex items-center justify-center gap-2 rounded-md bg-blue-500 px-8 py-3 font-semibold transition-colors hover:bg-blue-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-300"
                     >
                         <Download size={20} aria-hidden="true" /> Download
                     </a>
